@@ -1,5 +1,5 @@
 [package]
-name = "Project_2_Rust_CLI_with_SQLite"
+name = "project_2_rust_cli_with_sqlite"
 version = "0.1.0"
 edition = "2021"
 
