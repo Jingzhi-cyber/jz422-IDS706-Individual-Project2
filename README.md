@@ -1,5 +1,5 @@
 # IDS706-Project2
-[![rs_ci](https://github.com/Jingzhi-cyber/jz422-IDS706-Individual-Project2/actions/workflows/cicd.yml/badge.svg)](https://github.com/Jingzhi-cyber/jz422-IDS706-Individual-Project2/actions/workflows/rust.yml)
+[![rs_ci](https://github.com/Jingzhi-cyber/jz422-IDS706-Individual-Project2/actions/workflows/rust.yml/badge.svg)](https://github.com/Jingzhi-cyber/jz422-IDS706-Individual-Project2/actions/workflows/rust.yml)
 
 
 This repository sets up an environment on CodeSpaces and uses GitHub Actions to run a Makefile for the following commands: make install, make test, make format, and make lint.
