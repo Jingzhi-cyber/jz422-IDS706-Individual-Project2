@@ -3,13 +3,6 @@
 version = 3
 
 [[package]]
-name = "Project_2_Rust_CLI_with_SQLite"
-version = "0.1.0"
-dependencies = [
- "rusqlite",
-]
-
-[[package]]
 name = "ahash"
 version = "0.7.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -106,6 +99,13 @@ name = "pkg-config"
 version = "0.3.27"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "26072860ba924cbfa98ea39c8c19b4dd6a4a25423dbdf219c1eca91aa0cf6964"
+
+[[package]]
+name = "project_2_rust_cli_with_sqlite"
+version = "0.1.0"
+dependencies = [
+ "rusqlite",
+]
 
 [[package]]
 name = "rusqlite"

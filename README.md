@@ -1,57 +1,94 @@
-# IDS706-Project2
+# IDS706-Project2: Rust CLI for Book Inventory Management
 [![rs_ci](https://github.com/Jingzhi-cyber/jz422-IDS706-Individual-Project2/actions/workflows/rust.yml/badge.svg)](https://github.com/Jingzhi-cyber/jz422-IDS706-Individual-Project2/actions/workflows/rust.yml)
 
-
-This repository sets up an environment on CodeSpaces and uses GitHub Actions to run a Makefile for the following commands: make install, make test, make format, and make lint.
+This is a command-line interface (CLI) application written in Rust that provides a simple interface for managing a book inventory using SQLite. It allows users to add, list, update, and delete book records in a SQLite database.
 
 ## YouTube Introduction Vedio
-Feel free to watch this vedio that explains the project and demonstrates its functionality.
-<https://youtu.be/Xpyrg53JXGQ?si=mVKgXC5WVqQ4UjUk>
+A video demonstration of the CLI in action is available [here](https://youtu.be/Xpyrg53JXGQ?si=mVKgXC5WVqQ4UjUk). This video provides a walkthrough of the project's features and demonstrates how to interact with the CLI.
 
-## Getting Started
-To set up the project, simply run make all or run make install and make test.
-![Alt text](image_make.png)
 
 ## Features
-### Data Analysis
-Included are a Jupyter Notebook Descriptive_Statistics.ipynb and a Python script data_analysis.py that both perform basic data analysis tasks using Pandas:
 
-- Reads a dataset from a CSV file
-- Generates summary statistics like mean, median, and standard deviation
-- Creates a histogram for a specified column in the dataset
+- Add new book records to the inventory.
 
-### How to Use the Data Analysis Script
-1. Place your CSV file in the same directory as the script or update the file_path variable in the script to point to your CSV file.
-2. Run the script:
+  ![Alt text](images/add.png)
 
-    **python3 data_analysis.py**
+- List all books in the inventory with details.
 
-3. Check the output for summary statistics and look for the generated histogram image in the current directory.
-![Alt text](image_terminal.png)
+  ![Alt text](images/list.png)
 
-![Alt text](Average_histogram.png)
+- Update existing book records by ID.
 
-![Alt text](image_report.png)
+  ![Alt text](images/update.png)
 
-## Test CSV File: hurricanes.csv
+- Remove book records from the inventory by ID.
 
-I get it from <https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html>
-![Alt text](image_csv.png)
+  ![Alt text](images/remove.png)
+
+- Persistent storage with SQLite database.
+
+- Error handling to ensure robustness.
+
+
+## Dependencies
+
+To run this project, you will need Rust and Cargo installed on your system. You can install these from the [official Rust website](https://www.rust-lang.org/tools/install).
+
+Additionally, this project uses the `rusqlite` crate for interacting with the SQLite database. This dependency is listed in the `Cargo.toml` file and will be automatically handled by Cargo.
+
+
+## How to Run the Program
+
+1. Clone the repository to your local machine.
+2. Navigate to the project directory in your terminal.
+3. Build the project using Cargo:
+    ```bash
+    cargo build --release
+    ```
+4. Run the compiled binary:
+    ```bash
+    cargo run --release
+    ```
+5. Follow the on-screen prompts to interact with the book inventory.
+
+
+## Using GitHub Copilot
+
+Throughout the development of this application, GitHub Copilot was used extensively. Copilot provided code suggestions and snippets that helped speed up the implementation process. Specifically, Copilot assisted with:
+
+- SQL query syntax.
+- Rust function and error handling patterns.
+- Test case generation for unit tests.
+
+![Alt text](images/Copilot.png)
+
+Instructions for how to enable and use GitHub Copilot can be found in its [official documentation](https://docs.github.com/en/copilot).
+
+
+## GitHub Actions
+
+This project includes a GitHub Actions workflow that automatically builds, tests, and lints the code on every push to the repository. The workflow is defined in the `.github/workflows/rust.yml` file.
+
+## Optimized Rust Binary
+
+The GitHub Actions workflow is configured to produce an optimized Rust binary as an artifact. After each successful build on the `main` branch, the binary is available for download from the GitHub Actions run.
+
+In order to produce an optimized Rust binary, you should use the --release flag when building:
+
+    cargo build --release
+
+This command will generate an optimized binary file in the target/release/ directory.
+
 
 ## Project Structure
 - **.devcontainer** includes a Dockerfile and devcontainer.json. The **Dockerfile** within this folder specifies how the container should be built, and other settings in this directory may control development environment configurations.
-- **workflows** includes GitHub Actions, which contain configuration files for setting up automated build, test, and deployment pipelines for your project.
+- **.github/workflows/rust.yml** contains the GitHub Actions workflow. It defines CI/CD steps that automatically builds, tests, and lints the code on every push to the repository
 - **.gitignore** is used to specify which files or directories should be excluded from version control when using Git.
-- **Makefile** is a configuration file used in Unix-based systems for automating tasks and building software. It contains instructions and dependencies for compiling code, running tests, and other development tasks.
 - **README.md** is the instruction file for the readers.
-- **requirements.txt** is to specify the dependencies (libraries and packages) required to run the project.
-- **test_main.py** is a test file for main.py that can successfully run in IDEs.
-- **main.py** is a Python file that contains the main function.
-- **data_analysis.py** is a Python script for basic data analysis tasks.
-- **Descriptive_Statistics.ipynb** is a Jupyter Notebook with cells that perform descriptive statistics using Pandas.
-- **lib.py** is a python file that shares the common code between the script and notebook.
-- **test_lib** is a test file for lib.py.
-- **test_script** is a test file for data_analysis.py.
+- **src/main.rs** is the main entry point for this Rust application. It contains the logic for starting your CLI application.
+- **Cargo.toml** is the manifest file for Rust. It includes metadata about the project like the name, version, authors, and also lists the project's dependencies.
+- **Cargo.lock** is generated by Cargo and contains a complete, exact list of the dependencies used in your project, including all version numbers. This ensures that the project is reproducible on other machines.
+- **images** contains the demo images for this Rust CLI application.
 
 
 
