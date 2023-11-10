@@ -4,7 +4,7 @@
 This is a command-line interface (CLI) application written in Rust that provides a simple interface for managing a book inventory using SQLite. It allows users to add, list, update, and delete book records in a SQLite database.
 
 ## YouTube Introduction Vedio
-A video demonstration of the CLI in action is available [here](https://youtu.be/Xpyrg53JXGQ?si=mVKgXC5WVqQ4UjUk). This video provides a walkthrough of the project's features and demonstrates how to interact with the CLI.
+A video demonstration of the CLI in action is available [here](https://youtu.be/Cst8zGjD7sU). This video provides a walkthrough of the project's features and demonstrates how to interact with the CLI.
 
 
 ## Features
